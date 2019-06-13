@@ -6,5 +6,13 @@
 // RUN NPM I first!!!
 
 exports.botTranslator = (str) => {
-  
+  let split = str.split(' ')
+
+  let res = []
+
+  split.forEach(word => {
+    res.push(String.fromCharCode(parseInt(word, 2)))
+  })
+
+  return res.join('');
 }; 
